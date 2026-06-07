@@ -1,0 +1,10 @@
+# Labeler configuration
+ui-ux:
+  - '**/*.css'
+  - '**/*.html'
+
+javascript:
+  - '**/*.js'
+
+documentation:
+  - '**/*.md'

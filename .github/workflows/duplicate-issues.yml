@@ -1,0 +1,15 @@
+name: Check Duplicate Issues
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  find_duplicates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/issues-similarity-analysis@v1
+        with:
+          filter-threshold: 0.8
+          title-excludes: 'bug, feature'
+          comment-title: '### 🔎 Potential duplicate issues found'
+          comment-body: 'Please check if these issues have already addressed your problem.'
